@@ -23,6 +23,9 @@ function App() {
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
+useEffect(() => {
+  document.documentElement.lang = lang;
+}, [lang]);
 
   return (
     <>

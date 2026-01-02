@@ -45,18 +45,24 @@ function Home({ lang }) {
           {texts[lang].seeMore}
         </a>
       </div>
+<div className="avatar">
+  <div className="card">
+    <video
+      className="logo-video" src="/3d.logo.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+    />
+    <div className="info">
+      <div>Delivery</div>
+      <div>Company</div>
+      <div>24/24</div>
+      <div>REDOUAN</div>
+    </div>
+  </div>
+</div>
 
-      <div className="avatar">
-        <div className="card">
-          <img src="riders/logo.png" alt="Riders of Speed Logo" />
-          <div className="info">
-            <div>Delivery</div>
-            <div>Company</div>
-            <div>24/24</div>
-            <div>REDOUAN</div>
-          </div>
-        </div>
-      </div>
 
       {/* ✅ Social Icons */}
       <ul className="social-icons">

@@ -1,5 +1,6 @@
 {
-   "homepage": "https://nou44.github.io/riders",
+ "homepage": ".",
+
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
