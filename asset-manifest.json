@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/riders-speed/static/css/main.f6b70cf5.css",
-    "main.js": "/riders-speed/static/js/main.b358437b.js",
+    "main.css": "/riders-speed/static/css/main.fc83506d.css",
+    "main.js": "/riders-speed/static/js/main.5de3dddd.js",
     "static/js/453.afc533af.chunk.js": "/riders-speed/static/js/453.afc533af.chunk.js",
     "index.html": "/riders-speed/index.html",
-    "main.f6b70cf5.css.map": "/riders-speed/static/css/main.f6b70cf5.css.map",
-    "main.b358437b.js.map": "/riders-speed/static/js/main.b358437b.js.map",
+    "main.fc83506d.css.map": "/riders-speed/static/css/main.fc83506d.css.map",
+    "main.5de3dddd.js.map": "/riders-speed/static/js/main.5de3dddd.js.map",
     "453.afc533af.chunk.js.map": "/riders-speed/static/js/453.afc533af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6b70cf5.css",
-    "static/js/main.b358437b.js"
+    "static/css/main.fc83506d.css",
+    "static/js/main.5de3dddd.js"
   ]
 }
