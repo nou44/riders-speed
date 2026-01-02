@@ -1,8 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 const ThreeDBackground = () => {
+  const mounted = useRef(false);
+
   useEffect(() => {
+    if (mounted.current) return;
+    mounted.current = true;
+
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(
@@ -21,9 +26,7 @@ const ThreeDBackground = () => {
     renderer.domElement.style.left = "0";
     renderer.domElement.style.zIndex = "-1";
     renderer.domElement.style.pointerEvents = "none";
-
-    const container = document.getElementById("three-container");
-    container.appendChild(renderer.domElement);
+    document.body.appendChild(renderer.domElement);
 
     const light = new THREE.PointLight(0xffffff, 1);
     light.position.set(10, 10, 10);
@@ -50,10 +53,10 @@ const ThreeDBackground = () => {
       const cube = new THREE.Mesh(geometry, material);
       scene.add(cube);
 
-      const birthDelay = Math.random() * 5000;
-      const lifeSpan = 2000 + Math.random() * 3000;
-
-      cube.userData = { startTime: Date.now() + birthDelay, lifeSpan };
+      cube.userData = {
+        startTime: Date.now() + Math.random() * 5000,
+        lifeSpan: 2000 + Math.random() * 3000,
+      };
 
       randomizeMesh(cube);
       cubes.push(cube);
@@ -65,23 +68,22 @@ const ThreeDBackground = () => {
 
       cubes.forEach((cube) => {
         const { startTime, lifeSpan } = cube.userData;
-        const timeElapsed = now - startTime;
+        const t = now - startTime;
 
-        if (timeElapsed < 0) {
+        if (t < 0) {
           cube.material.opacity = 0;
           return;
         }
 
-        if (timeElapsed < lifeSpan / 2) {
-          cube.material.opacity = timeElapsed / (lifeSpan / 2);
-        } else if (timeElapsed < lifeSpan) {
-          cube.material.opacity = 1 - (timeElapsed - lifeSpan / 2) / (lifeSpan / 2);
+        if (t < lifeSpan / 2) {
+          cube.material.opacity = t / (lifeSpan / 2);
+        } else if (t < lifeSpan) {
+          cube.material.opacity = 1 - (t - lifeSpan / 2) / (lifeSpan / 2);
         } else {
           cube.userData.startTime = now + Math.random() * 5000;
           cube.userData.lifeSpan = 2000 + Math.random() * 3000;
           cube.material.opacity = 0;
           randomizeMesh(cube);
-          return;
         }
 
         cube.rotation.x += 0.02;
@@ -105,11 +107,12 @@ const ThreeDBackground = () => {
     }
 
     return () => {
-      container.removeChild(renderer.domElement);
+      renderer.dispose();
+      document.body.removeChild(renderer.domElement);
     };
   }, []);
 
-  return <div id="three-container"></div>;
+  return null;
 };
 
 export default ThreeDBackground;
