@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.061d370c.css",
-    "main.js": "./static/js/main.d15de4bb.js",
-    "static/js/453.fd2f0c4a.chunk.js": "./static/js/453.fd2f0c4a.chunk.js",
-    "index.html": "./index.html",
-    "main.061d370c.css.map": "./static/css/main.061d370c.css.map",
-    "main.d15de4bb.js.map": "./static/js/main.d15de4bb.js.map",
-    "453.fd2f0c4a.chunk.js.map": "./static/js/453.fd2f0c4a.chunk.js.map"
+    "main.css": "/Riders-Off-Speed/static/css/main.fc83506d.css",
+    "main.js": "/Riders-Off-Speed/static/js/main.fe1b1d8c.js",
+    "static/js/453.fd2f0c4a.chunk.js": "/Riders-Off-Speed/static/js/453.fd2f0c4a.chunk.js",
+    "index.html": "/Riders-Off-Speed/index.html",
+    "main.fc83506d.css.map": "/Riders-Off-Speed/static/css/main.fc83506d.css.map",
+    "main.fe1b1d8c.js.map": "/Riders-Off-Speed/static/js/main.fe1b1d8c.js.map",
+    "453.fd2f0c4a.chunk.js.map": "/Riders-Off-Speed/static/js/453.fd2f0c4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.061d370c.css",
-    "static/js/main.d15de4bb.js"
+    "static/css/main.fc83506d.css",
+    "static/js/main.fe1b1d8c.js"
   ]
 }
