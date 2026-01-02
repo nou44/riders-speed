@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/riderofspeed.com/static/css/main.362da80c.css",
-    "main.js": "/riderofspeed.com/static/js/main.c8066806.js",
-    "static/js/453.afc533af.chunk.js": "/riderofspeed.com/static/js/453.afc533af.chunk.js",
-    "index.html": "/riderofspeed.com/index.html",
-    "main.362da80c.css.map": "/riderofspeed.com/static/css/main.362da80c.css.map",
-    "main.c8066806.js.map": "/riderofspeed.com/static/js/main.c8066806.js.map",
-    "453.afc533af.chunk.js.map": "/riderofspeed.com/static/js/453.afc533af.chunk.js.map"
+    "main.css": "/static/css/main.362da80c.css",
+    "main.js": "/static/js/main.b9886829.js",
+    "static/js/453.afc533af.chunk.js": "/static/js/453.afc533af.chunk.js",
+    "index.html": "/index.html",
+    "main.362da80c.css.map": "/static/css/main.362da80c.css.map",
+    "main.b9886829.js.map": "/static/js/main.b9886829.js.map",
+    "453.afc533af.chunk.js.map": "/static/js/453.afc533af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.362da80c.css",
-    "static/js/main.c8066806.js"
+    "static/js/main.b9886829.js"
   ]
 }
