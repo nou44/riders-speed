@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/riders-speed/static/css/main.fc83506d.css",
+    "main.js": "/riders-speed/static/js/main.59883d2a.js",
+    "static/js/453.afc533af.chunk.js": "/riders-speed/static/js/453.afc533af.chunk.js",
+    "index.html": "/riders-speed/index.html",
+    "main.fc83506d.css.map": "/riders-speed/static/css/main.fc83506d.css.map",
+    "main.59883d2a.js.map": "/riders-speed/static/js/main.59883d2a.js.map",
+    "453.afc533af.chunk.js.map": "/riders-speed/static/js/453.afc533af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc83506d.css",
+    "static/js/main.59883d2a.js"
+  ]
+}
