@@ -291,7 +291,8 @@ function Services({ lang }) {
   <div className="service-content animate">
 
     <div className="service-media">
-      <video src="/cash.mp4" autoPlay loop muted playsInline />
+   <video src={process.env.PUBLIC_URL + "/cash.mp4"} autoPlay loop muted />
+
     </div>
 
     <div className="service-text">
