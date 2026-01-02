@@ -21,7 +21,9 @@ const ThreeDBackground = () => {
     renderer.domElement.style.left = "0";
     renderer.domElement.style.zIndex = "-1";
     renderer.domElement.style.pointerEvents = "none";
-    document.body.appendChild(renderer.domElement);
+
+    const container = document.getElementById("three-container");
+    container.appendChild(renderer.domElement);
 
     const light = new THREE.PointLight(0xffffff, 1);
     light.position.set(10, 10, 10);
@@ -30,16 +32,15 @@ const ThreeDBackground = () => {
 
     const cubes = [];
 
-    // نصايبو عدد كبير ديال المكعبات
     for (let i = 0; i < 50; i++) {
       const geometry = new THREE.BoxGeometry(
-        1 + Math.random() * 1.5, // الطول
-        1 + Math.random() * 1.5, // العرض
-        1 + Math.random() * 1.5  // العمق
+        1 + Math.random() * 1.5,
+        1 + Math.random() * 1.5,
+        1 + Math.random() * 1.5
       );
 
       const material = new THREE.MeshStandardMaterial({
-        color: Math.random() > 0.5 ? 0xff0000 : 0x000000, // أحمر أو أسود
+        color: Math.random() > 0.5 ? 0xff0000 : 0x000000,
         transparent: true,
         opacity: 0,
         metalness: 0.6,
@@ -52,10 +53,7 @@ const ThreeDBackground = () => {
       const birthDelay = Math.random() * 5000;
       const lifeSpan = 2000 + Math.random() * 3000;
 
-      cube.userData = {
-        startTime: Date.now() + birthDelay,
-        lifeSpan,
-      };
+      cube.userData = { startTime: Date.now() + birthDelay, lifeSpan };
 
       randomizeMesh(cube);
       cubes.push(cube);
@@ -90,9 +88,7 @@ const ThreeDBackground = () => {
         cube.rotation.y += 0.01;
         cube.position.z -= 0.03;
 
-        if (cube.position.z < -20) {
-          cube.position.z = 10;
-        }
+        if (cube.position.z < -20) cube.position.z = 10;
       });
 
       renderer.render(scene, camera);
@@ -109,11 +105,11 @@ const ThreeDBackground = () => {
     }
 
     return () => {
-      document.body.removeChild(renderer.domElement);
+      container.removeChild(renderer.domElement);
     };
   }, []);
 
-  return null;
+  return <div id="three-container"></div>;
 };
 
 export default ThreeDBackground;
